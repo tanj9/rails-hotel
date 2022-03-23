@@ -1,0 +1,22 @@
+<h1>Merci pour votre réservation</h1>
+
+<h2>Récapitulatif</h2>
+<ul>
+  <li>
+    Du <%= @booking.arrival %> au <%= @booking.departure %>
+  </li>
+  <li>
+    Chambre n°<%= @booking.room.room_number %>
+  </li>
+  <li>
+    Nombre de voyageurs: <%= @booking.guest_number %>
+  </li>
+  <li>
+    Nuitée(s): <%= @booking.night_number %>
+  </li>
+  <li>
+    Prix total: <%= @booking.total_price %>€
+  </li>
+</ul>
+
+<%= link_to "Retour à la page d'accueil", root_path %>

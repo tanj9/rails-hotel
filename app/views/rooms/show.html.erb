@@ -11,6 +11,6 @@
 <%= simple_form_for [@room.hotel, @room, @booking] do |f| %>
   <%= f.input :arrival, label: "Du:", required: true, as: :date, html5: true %>
   <%= f.input :departure, label: "Au:", required: true, as: :date, html5: true %>
-  <%= f.input :guest_number %>
+  <%= f.input :guest_number, label: "Nombre de voyageurs", required: true %>
   <%= f.submit %>
 <% end %>
