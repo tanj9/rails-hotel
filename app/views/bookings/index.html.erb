@@ -1,0 +1,9 @@
+<h1>Liste des réservations</h1>
+
+<ul>
+  <% @bookings.each do |booking| %>
+    <li>
+    Du <%= booking.arrival %> au <%= booking.departure %>: chambre n°<%= booking.room.room_number %>, <%= booking.guest_number %> voyageur(s), <%= booking.night_number %> nuitées, <%= booking.total_price %>€ (réservé le <%= booking.created_at %>)
+    </li>
+  <% end %>
+</ul>
