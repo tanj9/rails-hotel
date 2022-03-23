@@ -1,0 +1,16 @@
+<h1>Chambre numéro <%= @room.room_number %></h1>
+<ul>
+  <li>
+    Couchages: <%= @room.capacity %>
+  </li>
+  <li>
+    Prix: <%= @room.daily_price %>€/nuit
+  </li>
+</ul>
+
+<%= simple_form_for [@room.hotel, @room, @booking] do |f| %>
+  <%= f.input :arrival, label: "Du:", required: true, as: :date, html5: true %>
+  <%= f.input :departure, label: "Au:", required: true, as: :date, html5: true %>
+  <%= f.input :guest_number %>
+  <%= f.submit %>
+<% end %>
